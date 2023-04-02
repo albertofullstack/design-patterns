@@ -1,0 +1,8 @@
+/.idea
+/.metadata
+*/.idea
+*/.metadata
+*/out
+.project
+*.iml
+/.vscode
