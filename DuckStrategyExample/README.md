@@ -1,6 +1,6 @@
 # Strategy pattern example
 
-## Duck simulator</h2>
+## Duck simulator
 
 This simulator is extracted from the book Head First design patterns.
 
