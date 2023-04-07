@@ -28,7 +28,8 @@ public class ShoppingCart {
     return sum;
   }
 
-  public void pay() {
+  public void pay(Payment paymentStrategy) {
     int amount = calculateTotal();
+    paymentStrategy.pay(amount);
   }
 }
