@@ -1,6 +1,4 @@
-package com.dessignpatterns.com.model;
-
-import com.dessignpatterns.com.interfaces.Subject;
+package com.dessignpatterns.com.interfaces;
 
 public interface Observer {
 

@@ -1,7 +1,5 @@
 package com.dessignpatterns.com.interfaces;
 
-import com.dessignpatterns.com.model.Observer;
-
 public interface Subject {
 
   public void register(Observer observer);

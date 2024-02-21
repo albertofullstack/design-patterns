@@ -1,8 +1,8 @@
 package com.dessignpatterns.com;
 
+import com.dessignpatterns.com.interfaces.Observer;
 import com.dessignpatterns.com.model.EmailTopic;
 import com.dessignpatterns.com.model.EmailTopicSubscriber;
-import com.dessignpatterns.com.model.Observer;
 
 public class Main {
 

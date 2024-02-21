@@ -1,5 +1,6 @@
 package com.dessignpatterns.com.model;
 
+import com.dessignpatterns.com.interfaces.Observer;
 import com.dessignpatterns.com.interfaces.Subject;
 
 public class EmailTopicSubscriber implements Observer {
