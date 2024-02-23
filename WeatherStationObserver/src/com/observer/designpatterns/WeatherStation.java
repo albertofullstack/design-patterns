@@ -5,7 +5,7 @@ import com.observer.designpatterns.impl.ForecastDisplay;
 import com.observer.designpatterns.impl.StatisticsDisplay;
 import com.observer.designpatterns.impl.WeatherData;
 
-public class Main {
+public class WeatherStation {
 
   public static void main(String[] args) {
     WeatherData weatherData = new WeatherData();
