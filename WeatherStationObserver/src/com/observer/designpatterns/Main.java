@@ -1,6 +1,7 @@
 package com.observer.designpatterns;
 
 import com.observer.designpatterns.impl.CurrentConditionsDisplay;
+import com.observer.designpatterns.impl.ForecastDisplay;
 import com.observer.designpatterns.impl.WeatherData;
 
 public class Main {
@@ -13,5 +14,8 @@ public class Main {
 
     weatherData.removeObserver(currentDisplay);
     weatherData.setMeasurements(6.8f, 3f, 1f);
+
+    ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+    weatherData.setMeasurements(5.8f, 4f, 3f);
   }
 }
