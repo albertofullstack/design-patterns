@@ -1,0 +1,10 @@
+
+Y
+java:S2589"7Remove this expression which always evaluates to "true"(°Æ„îúÿÿÿÿ8Ä“Ì¹Ý1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(šò¶ç8È“Ì¹Ý1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ìÀ¹È8É“Ì¹Ý1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ýÊÔÌÿÿÿÿÿ8É“Ì¹Ý1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(èÍÔ„üÿÿÿÿ8É“Ì¹Ý1
+Q
+java:S1068
+"/Remove this unused "weatherData" private field.(òÿÉ™øÿÿÿÿ8Ê“Ì¹Ý1

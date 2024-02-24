@@ -1,0 +1,12 @@
+
+M
+java:S1874"0Remove this use of "Observer"; it is deprecated.(ÖÎ‘ç8ğÆÁºİ1
+T
+java:S1874	"2Remove this use of "Observable"; it is deprecated.(¶ôÉåúÿÿÿÿ8¶€Âºİ1
+O
+java:S1874"2Remove this use of "Observable"; it is deprecated.(üãÒŞ8±¡Âºİ1
+N	java:S106"9Replace this use of System.out or System.err by a logger.(é»÷³
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(‹›Àüÿÿÿÿ8ÛŠÃºİ1
+J
+java:S1068	"/Remove this unused "weatherData" private field.(¶ôÉåúÿÿÿÿ

@@ -1,0 +1,13 @@
+
+g
+java:S1854"ERemove this useless assignment to local variable "statisticsDisplay".(ºßÌ°ûÿÿÿÿ8Ü¤ş¸İ1
+_
+java:S1854"CRemove this useless assignment to local variable "forecastDisplay".(¤äÚ?8ÁÃŒ¹İ1
+d
+java:S1854"BRemove this useless assignment to local variable "currentDisplay".(òì…Èùÿÿÿÿ8çä¤¹İ1
+U
+java:S1481"3Remove this unused "currentDisplay" local variable.(òì…Èùÿÿÿÿ8èä¤¹İ1
+P
+java:S1481"4Remove this unused "forecastDisplay" local variable.(¤äÚ?8â¤ş¸İ1
+X
+java:S1481"6Remove this unused "statisticsDisplay" local variable.(ºßÌ°ûÿÿÿÿ8ÅÃŒ¹İ1

@@ -1,0 +1,17 @@
+
+Y
+java:S2589#"7Remove this expression which always evaluates to "true"(°Æ„îúÿÿÿÿ8Ÿ­¾ºİ1
+R
+java:S1874"0Remove this use of "Observer"; it is deprecated.(³Ş¼ÿıÿÿÿÿ8¢­¾ºİ1
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(¶ôÉåúÿÿÿÿ8¤­¾ºİ1
+T
+java:S1874"2Remove this use of "Observable"; it is deprecated.(Ö‰…¸şÿÿÿÿ8Ÿ¼Àºİ1
+N
+java:S1874"2Remove this use of "Observable"; it is deprecated.(Ø†±8ÊîÀºİ1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(šò¶ç8¥­¾ºİ1
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(ìÀ¹È8¦­¾ºİ1
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ıÊÔÌÿÿÿÿÿ8¦­¾ºİ1
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(èÍÔ„üÿÿÿÿ8¦­¾ºİ1
+Q
+java:S1068"/Remove this unused "weatherData" private field.(¶ôÉåúÿÿÿÿ8§­¾ºİ1
