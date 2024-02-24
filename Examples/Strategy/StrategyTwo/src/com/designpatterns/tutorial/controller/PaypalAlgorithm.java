@@ -1,10 +1,5 @@
 package com.designpatterns.tutorial.controller;
 
-import lombok.Builder;
-import lombok.Setter;
-
-@Builder
-@Setter
 public class PaypalAlgorithm implements Payment {
 
   private String email;
