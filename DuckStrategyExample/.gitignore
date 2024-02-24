@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+/out/production/design-patterns/resources/*
 
 ### Eclipse ###
 .apt_generated
