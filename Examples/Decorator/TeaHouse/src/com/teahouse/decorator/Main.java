@@ -10,8 +10,8 @@ public class Main {
   public static void main(String[] args) {
 
     Tea greenTea = new GreenTea();
-    Milk milk = new Milk(greenTea);
-    SagoPearls pearls = new SagoPearls(milk);
-    System.out.println("Order: " + pearls.getName() + " cost: " + pearls.cost());
+    greenTea = new Milk(greenTea);
+    greenTea = new SagoPearls(greenTea);
+    System.out.println("Order: " + greenTea.getName() + " cost: " + greenTea.cost());
   }
 }
