@@ -2,28 +2,28 @@ package dessignpattern.model;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
-  @Override
-  public void createDough() {
-
+  public Dough createDough() {
+    return new ThinCrustDough();
   }
 
-  @Override
-  public void createSauce() {
-
+  public Sauce createSauce() {
+    return new MarinaraSauce();
   }
 
-  @Override
-  public void createCheese() {
-
+  public Cheese createCheese() {
+    return new ReggianoCheese();
   }
 
-  @Override
-  public void createPepperoni() {
-
+  public Veggies[] createVeggies() {
+    Veggies veggies[] = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
+    return veggies;
   }
 
-  @Override
-  public void createClam() {
+  public Pepperoni createPepperoni() {
+    return new SlicedPepperoni();
+  }
 
+  public Clams createClam() {
+    return new FreshClams();
   }
 }

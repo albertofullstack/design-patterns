@@ -2,9 +2,10 @@ package dessignpattern.model;
 
 public interface PizzaIngredientFactory {
 
-  public void createDough();
-  public void createSauce();
-  public void createCheese();
-  public void createPepperoni();
-  public void createClam();
+  public Dough createDough();
+  public Sauce createSauce();
+  public Cheese createCheese();
+  public Veggies[] createVeggies();
+  public Pepperoni createPepperoni();
+  public Clams createClam();
 }

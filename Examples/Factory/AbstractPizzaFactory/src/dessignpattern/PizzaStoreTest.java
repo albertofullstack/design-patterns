@@ -1,7 +1,9 @@
 package dessignpattern;
 
 
+import dessignpattern.model.ChicagoPizzaIngredientFactory;
 import dessignpattern.model.ChicagoPizzaStore;
+import dessignpattern.model.NYPizzaIngredientFactory;
 import dessignpattern.model.NYPizzaStore;
 import dessignpattern.model.PizzaStore;
 
@@ -9,7 +11,7 @@ public class PizzaStoreTest {
 
   public static void main(String[] args) {
 
-    PizzaStore nyPizzaStore = new NYPizzaStore();
+    PizzaStore nyPizzaStore = new NYPizzaStore(new NYPizzaIngredientFactory());
     System.out.println("Ordering NY Cheese Pizza");
     nyPizzaStore.orderPizza("cheese");
     System.out.println("NY Cheese Pizza - Order delivered");
@@ -21,7 +23,7 @@ public class PizzaStoreTest {
 
     System.out.println();
 
-    PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+    PizzaStore chicagoPizzaStore = new ChicagoPizzaStore(new ChicagoPizzaIngredientFactory());
     System.out.println("Ordering Chicago Cheese Pizza");
     chicagoPizzaStore.orderPizza("cheese");
     System.out.println("Chicago Cheese Pizza - Order delivered");

@@ -5,23 +5,18 @@ import java.util.ArrayList;
 abstract public class Pizza {
 
   String name;
-  String dough;
-  String sauce;
-  ArrayList toppings = new ArrayList();
+  Dough dough;
+  Sauce sauce;
+  Veggies veggies[];
+  Cheese cheese;
+  Pepperoni pepperoni;
+  Clams clam;
 
   public String getName() {
     return name;
   }
 
-  public void prepare() {
-    System.out.println("Preparing " + name);
-    System.out.println("Tossing dough...");
-    System.out.println("Adding sauce...");
-    System.out.println("Adding toppings: ");
-    for (Object o: toppings) {
-      System.out.println("   " + o);
-    }
-  }
+  abstract void prepare();
 
   public void bake() {
     System.out.println("Baking " + name);
@@ -36,14 +31,37 @@ abstract public class Pizza {
   }
 
   public String toString() {
-    // code to display pizza name and ingredients
-    StringBuffer display = new StringBuffer();
-    display.append("---- " + name + " ----\n");
-    display.append(dough + "\n");
-    display.append(sauce + "\n");
-    for (int i = 0; i < toppings.size(); i++) {
-      display.append((String) toppings.get(i) + "\n");
+    StringBuffer result = new StringBuffer();
+    result.append("---- " + name + " ----\n");
+    if (dough != null) {
+      result.append(dough);
+      result.append("\n");
     }
-    return display.toString();
+    if (sauce != null) {
+      result.append(sauce);
+      result.append("\n");
+    }
+    if (cheese != null) {
+      result.append(cheese);
+      result.append("\n");
+    }
+    if (veggies != null) {
+      for (int i = 0; i < veggies.length; i++) {
+        result.append(veggies[i]);
+        if (i < veggies.length-1) {
+          result.append(", ");
+        }
+      }
+      result.append("\n");
+    }
+    if (clam != null) {
+      result.append(clam);
+      result.append("\n");
+    }
+    if (pepperoni != null) {
+      result.append(pepperoni);
+      result.append("\n");
+    }
+    return result.toString();
   }
 }

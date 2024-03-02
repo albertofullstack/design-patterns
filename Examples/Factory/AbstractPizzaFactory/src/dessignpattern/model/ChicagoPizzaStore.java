@@ -2,6 +2,11 @@ package dessignpattern.model;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
+  private PizzaIngredientFactory pizzaIngredientFactory;
+  public ChicagoPizzaStore(PizzaIngredientFactory pizzaIngredientFactory) {
+    this.pizzaIngredientFactory = pizzaIngredientFactory;
+  }
+
   public Pizza createPizza(String type) {
     Pizza pizza = null;
     if (type.equals("cheese")) {
