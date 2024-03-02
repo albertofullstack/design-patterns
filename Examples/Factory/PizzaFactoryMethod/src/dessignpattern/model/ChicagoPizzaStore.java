@@ -2,10 +2,6 @@ package dessignpattern.model;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
-  public ChicagoPizzaStore(SimplePizzaFactory factory) {
-    super(factory);
-  }
-
   public Pizza createPizza(String type) {
     Pizza pizza = null;
     if (type.equals("cheese")) {
