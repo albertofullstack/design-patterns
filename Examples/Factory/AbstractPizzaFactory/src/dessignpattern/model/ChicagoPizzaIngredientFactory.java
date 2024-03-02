@@ -1,5 +1,20 @@
 package dessignpattern.model;
 
+import dessignpattern.model.ingredients.BlackOlives;
+import dessignpattern.model.ingredients.Cheese;
+import dessignpattern.model.ingredients.Clams;
+import dessignpattern.model.ingredients.Dough;
+import dessignpattern.model.ingredients.Eggplant;
+import dessignpattern.model.ingredients.FrozenClams;
+import dessignpattern.model.ingredients.MozzarellaCheese;
+import dessignpattern.model.ingredients.Pepperoni;
+import dessignpattern.model.ingredients.PlumTomatoSauce;
+import dessignpattern.model.ingredients.Sauce;
+import dessignpattern.model.ingredients.SlicedPepperoni;
+import dessignpattern.model.ingredients.Spinach;
+import dessignpattern.model.ingredients.ThickCrustDough;
+import dessignpattern.model.ingredients.Veggies;
+
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
   public Dough createDough() {

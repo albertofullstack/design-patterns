@@ -1,4 +1,4 @@
-package dessignpattern.model;
+package dessignpattern.model.ingredients;
 
 public class MarinaraSauce implements Sauce {
 	public String toString() {

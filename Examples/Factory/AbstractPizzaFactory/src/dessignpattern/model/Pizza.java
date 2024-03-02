@@ -1,6 +1,11 @@
 package dessignpattern.model;
 
-import java.util.ArrayList;
+import dessignpattern.model.ingredients.Cheese;
+import dessignpattern.model.ingredients.Clams;
+import dessignpattern.model.ingredients.Dough;
+import dessignpattern.model.ingredients.Pepperoni;
+import dessignpattern.model.ingredients.Sauce;
+import dessignpattern.model.ingredients.Veggies;
 
 abstract public class Pizza {
 

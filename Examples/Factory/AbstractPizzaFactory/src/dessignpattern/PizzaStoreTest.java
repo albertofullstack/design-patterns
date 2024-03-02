@@ -5,32 +5,38 @@ import dessignpattern.model.ChicagoPizzaIngredientFactory;
 import dessignpattern.model.ChicagoPizzaStore;
 import dessignpattern.model.NYPizzaIngredientFactory;
 import dessignpattern.model.NYPizzaStore;
+import dessignpattern.model.Pizza;
 import dessignpattern.model.PizzaStore;
 
 public class PizzaStoreTest {
 
   public static void main(String[] args) {
 
-    PizzaStore nyPizzaStore = new NYPizzaStore(new NYPizzaIngredientFactory());
-    System.out.println("Ordering NY Cheese Pizza");
-    nyPizzaStore.orderPizza("cheese");
-    System.out.println("NY Cheese Pizza - Order delivered");
+    PizzaStore nyStore = new NYPizzaStore();
+    PizzaStore chicagoStore = new ChicagoPizzaStore();
 
-    System.out.println();
-    System.out.println("Ordering NY Veggie Pizza");
-    nyPizzaStore.orderPizza("veggie");
-    System.out.println("NY Veggie Pizza - Order delivered");
+    Pizza pizza = nyStore.orderPizza("cheese");
+    System.out.println("Ethan ordered a " + pizza + "\n");
 
-    System.out.println();
+    pizza = chicagoStore.orderPizza("cheese");
+    System.out.println("Joel ordered a " + pizza + "\n");
 
-    PizzaStore chicagoPizzaStore = new ChicagoPizzaStore(new ChicagoPizzaIngredientFactory());
-    System.out.println("Ordering Chicago Cheese Pizza");
-    chicagoPizzaStore.orderPizza("cheese");
-    System.out.println("Chicago Cheese Pizza - Order delivered");
-    System.out.println();
+    pizza = nyStore.orderPizza("clam");
+    System.out.println("Ethan ordered a " + pizza + "\n");
 
-    System.out.println("Ordering Chicago Clam Pizza");
-    chicagoPizzaStore.orderPizza("clam");
-    System.out.println("Chicago Clam Pizza - Order delivered");
+    pizza = chicagoStore.orderPizza("clam");
+    System.out.println("Joel ordered a " + pizza + "\n");
+
+    pizza = nyStore.orderPizza("pepperoni");
+    System.out.println("Ethan ordered a " + pizza + "\n");
+
+    pizza = chicagoStore.orderPizza("pepperoni");
+    System.out.println("Joel ordered a " + pizza + "\n");
+
+    pizza = nyStore.orderPizza("veggie");
+    System.out.println("Ethan ordered a " + pizza + "\n");
+
+    pizza = chicagoStore.orderPizza("veggie");
+    System.out.println("Joel ordered a " + pizza + "\n");
   }
 }

@@ -2,21 +2,17 @@ package dessignpattern.model;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
-  private PizzaIngredientFactory pizzaIngredientFactory;
-  public ChicagoPizzaStore(PizzaIngredientFactory pizzaIngredientFactory) {
-    this.pizzaIngredientFactory = pizzaIngredientFactory;
-  }
-
   public Pizza createPizza(String type) {
     Pizza pizza = null;
+    PizzaIngredientFactory pizzaFactoryIngredient = new ChicagoPizzaIngredientFactory();
     if (type.equals("cheese")) {
-      pizza = new ChicagoStyleCheesePizza();
+      pizza = new CheesePizza(pizzaFactoryIngredient);
     } else if (type.equals("pepperoni")) {
-      pizza = new ChicagoStylePepperoniPizza();
+      pizza = new PepperoniPizza(pizzaFactoryIngredient);
     } else if (type.equals("clam")) {
-      pizza = new ChicagoStyleClamPizza();
+      pizza = new ClamPizza(pizzaFactoryIngredient);
     } else if (type.equals("veggie")) {
-      pizza = new ChicagoStyleVeggiePizza();
+      pizza = new VeggiePizza(pizzaFactoryIngredient);
     }
     return pizza;
   }
