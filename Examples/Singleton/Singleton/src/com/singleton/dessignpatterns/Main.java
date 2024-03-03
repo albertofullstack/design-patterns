@@ -4,10 +4,10 @@ public class Main {
 
   public static void main(String[] args) {
     // The two singleton instances have the same memory address (since only one is declared)
-    Singleton singleton = Singleton.getInstance();
+    LazySingleton singleton = LazySingleton.getInstance();
     System.out.println(singleton);
 
-    Singleton singleton2 = Singleton.getInstance();
+    LazySingleton singleton2 = LazySingleton.getInstance();
     System.out.println(singleton2);
   }
 }
