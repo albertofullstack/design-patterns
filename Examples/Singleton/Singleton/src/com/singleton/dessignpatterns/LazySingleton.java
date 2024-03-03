@@ -3,7 +3,9 @@ package com.singleton.dessignpatterns;
 public class LazySingleton {
 
   private static LazySingleton singleton;
-  private LazySingleton() {}
+  private LazySingleton() {
+    System.out.println("Lazy Instance Created");
+  }
 
   // Lazy mode
   public static LazySingleton getInstance() {
@@ -12,5 +14,9 @@ public class LazySingleton {
       singleton = new LazySingleton();
     }
     return singleton;
+  }
+
+  public static String dummyLazyProperty() {
+    return "This is a Dummy Lazy Property";
   }
 }
