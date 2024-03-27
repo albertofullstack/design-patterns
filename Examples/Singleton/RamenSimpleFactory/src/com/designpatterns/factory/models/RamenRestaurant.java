@@ -4,16 +4,15 @@ import com.designpatterns.factory.interfaces.Ramen;
 
 public class RamenRestaurant {
 
+  private RamenFactory ramenFactory;
+
+  public RamenRestaurant(RamenFactory ramenFactory) {
+    this.ramenFactory = ramenFactory;
+  }
+
   public Ramen orderRamen(String type) {
 
-    Ramen ramen = null;
-    if (type.equals("beef")) {
-      ramen = new BeefRamen();
-    } else if (type.equals("pork")) {
-      ramen = new PorkRamen();
-    } else if (type.equals("veggie")) {
-      ramen = new VeggieRamen();
-    }
+    Ramen ramen = ramenFactory.createRamen(type);
     ramen.prepare();
     ramen.serve();
     System.out.println("Ramen price: " + ramen.calculateCost());
