@@ -1,6 +1,5 @@
 package com.designpatterns.factory;
 
-import com.designpatterns.factory.interfaces.Ramen;
 import com.designpatterns.factory.models.RamenFactory;
 import com.designpatterns.factory.models.RamenRestaurant;
 
