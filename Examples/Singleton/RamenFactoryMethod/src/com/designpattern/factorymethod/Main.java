@@ -10,9 +10,12 @@ public class Main {
 
     // First instance the restaurant to order from
     RamenRestaurant hokkaidoRestaurant = new HokkaidoRamenRestaurant();
+    System.out.println("Ordering from Hokkaido Restaurant");
     hokkaidoRestaurant.orderRamen("veggie");
     hokkaidoRestaurant.orderRamen("pork");
 
+    System.out.println();
+    System.out.println("Ordering from Hakata Restaurant");
     RamenRestaurant hakataRestaurant = new HakataRamenRestaurant();
     hakataRestaurant.orderRamen("beef");
   }

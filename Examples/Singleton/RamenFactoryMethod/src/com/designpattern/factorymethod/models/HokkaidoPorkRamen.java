@@ -1,15 +1,13 @@
 package com.designpattern.factorymethod.models;
 
-import com.designpattern.factorymethod.interfaces.Ramen;
+import java.util.Arrays;
 
 public class HokkaidoPorkRamen extends Ramen {
 
   public HokkaidoPorkRamen() {
-    super("Hokkaido Pork ramen");
-  }
-
-  @Override
-  public double calculateCost() {
-    return 4.8;
+    name = "Hokkaido Pork ramen";
+    price = 4.8;
+    noodles = "Thick noodles";
+    toppings = Arrays.asList("Creamy butter", "Sweet corn");
   }
 }

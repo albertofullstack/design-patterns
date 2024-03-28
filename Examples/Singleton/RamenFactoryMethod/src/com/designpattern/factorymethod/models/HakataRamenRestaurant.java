@@ -1,6 +1,5 @@
 package com.designpattern.factorymethod.models;
 
-import com.designpattern.factorymethod.interfaces.Ramen;
 import com.designpattern.factorymethod.interfaces.RamenRestaurant;
 
 public class HakataRamenRestaurant extends RamenRestaurant {

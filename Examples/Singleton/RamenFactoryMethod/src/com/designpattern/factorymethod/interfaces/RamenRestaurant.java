@@ -1,6 +1,6 @@
 package com.designpattern.factorymethod.interfaces;
 
-import com.designpattern.factorymethod.interfaces.Ramen;
+import com.designpattern.factorymethod.models.Ramen;
 
 public abstract class RamenRestaurant {
 
@@ -9,7 +9,6 @@ public abstract class RamenRestaurant {
     Ramen ramen = createRamen(type);
     ramen.prepare();
     ramen.serve();
-    System.out.println("Ramen price: " + ramen.calculateCost());
     return ramen;
   }
 
