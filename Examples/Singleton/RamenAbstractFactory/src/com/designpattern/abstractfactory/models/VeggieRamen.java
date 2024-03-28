@@ -8,6 +8,7 @@ public class VeggieRamen extends Ramen {
     name = "Veggie ramen";
     price = 2.3;
     protein = new Tofu();
+    this.ingredientFactory = ingredientFactory;
   }
 
   @Override

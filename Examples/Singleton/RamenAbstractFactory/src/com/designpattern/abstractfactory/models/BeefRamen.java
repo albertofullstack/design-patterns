@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class BeefRamen extends Ramen {
 
   public BeefRamen(IngredientFactory ingredientFactory) {
+    name = "Beef ramen";
     this.ingredientFactory = ingredientFactory;
   }
 
