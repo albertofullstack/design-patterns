@@ -7,12 +7,16 @@ public class HakataRamenRestaurant extends RamenRestaurant {
   @Override
   public Ramen createRamen(String type) {
     Ramen ramen = null;
-    if (type.equals("beef")) {
-      ramen = new HakataBeefRamen();
-    } else if (type.equals("pork")) {
-      ramen = new HakataBeefRamen();
-    } else if (type.equals("veggie")) {
-      ramen = new HakataVeggieRamen();
+    switch (type) {
+      case "beef":
+        ramen = new HakataBeefRamen();
+        break;
+      case "pork":
+        ramen = new HakataBeefRamen();
+        break;
+      case "veggie":
+        ramen = new HakataVeggieRamen();
+        break;
     }
     return ramen;
   }
