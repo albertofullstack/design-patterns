@@ -12,6 +12,7 @@ public class Main {
     RamenRestaurant hokkaidoRestaurant = new HokkaidoRamenRestaurant();
     System.out.println("Ordering from Hokkaido Restaurant");
     hokkaidoRestaurant.orderRamen("veggie");
+    System.out.println("----------------------------------");
     hokkaidoRestaurant.orderRamen("pork");
 
     System.out.println();
