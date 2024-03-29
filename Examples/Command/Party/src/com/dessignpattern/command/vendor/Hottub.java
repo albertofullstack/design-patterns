@@ -22,7 +22,7 @@ public class Hottub {
 	}
 
 	public void bubblesOff() {
-		if (on) {
+		if (!on) {
 			System.out.println("Hottub is not bubbling");
 		}
 	}

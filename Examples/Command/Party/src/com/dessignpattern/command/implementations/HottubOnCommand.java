@@ -14,10 +14,12 @@ public class HottubOnCommand implements Command {
   @Override
   public void execute() {
     this.hottub.on();
+    hottub.bubblesOn();
   }
 
   @Override
   public void undo() {
     this.hottub.off();
+    hottub.bubblesOff();
   }
 }
