@@ -1,4 +1,4 @@
-package vendor;
+package com.dessignpattern.command.vendor;
 
 public class TV {
 	String location;

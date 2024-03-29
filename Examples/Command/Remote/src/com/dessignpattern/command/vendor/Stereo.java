@@ -1,4 +1,4 @@
-package vendor;
+package com.dessignpattern.command.vendor;
 
 public class Stereo {
 	String location;
