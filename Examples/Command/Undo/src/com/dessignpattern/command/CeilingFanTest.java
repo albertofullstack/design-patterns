@@ -36,8 +36,9 @@ public class CeilingFanTest {
     simpleRemoteControl.setOnCommand(ceilingFanLow, 1);
     simpleRemoteControl.setOnCommand(ceilingFanMedium, 2);
     simpleRemoteControl.setOnCommand(ceilingFanHigh, 3);
-
     System.out.println(simpleRemoteControl);
+
+    // turns on the fan and undo (should be off)
     simpleRemoteControl.pressOnButton(0);
     simpleRemoteControl.undoButton();
 
@@ -47,8 +48,10 @@ public class CeilingFanTest {
     // set medium speed
     simpleRemoteControl.pressOnButton(2);
 
-    // undo medium speed
+    // undo medium speed (should be back to high speed)
     simpleRemoteControl.undoButton();
     System.out.println(simpleRemoteControl);
+
+    simpleRemoteControl.undoButton();
   }
 }
