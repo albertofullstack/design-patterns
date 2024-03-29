@@ -1,4 +1,4 @@
-package interfaces;
+package com.dessignpattern.command.interfaces;
 
 public interface Command {
 

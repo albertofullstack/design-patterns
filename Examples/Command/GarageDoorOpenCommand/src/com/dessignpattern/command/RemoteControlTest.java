@@ -1,3 +1,5 @@
+package com.dessignpattern.command;
+
 import com.dessignpattern.command.implementations.LightOnCommand;
 import com.dessignpattern.command.implementations.SimpleRemoteControl;
 import com.dessignpattern.command.interfaces.Command;

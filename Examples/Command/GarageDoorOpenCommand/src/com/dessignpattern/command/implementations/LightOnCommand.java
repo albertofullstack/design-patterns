@@ -1,4 +1,4 @@
-package implementations;
+package com.dessignpattern.command.implementations;
 
 import com.dessignpattern.command.interfaces.Command;
 import com.dessignpattern.command.vendor.Light;
