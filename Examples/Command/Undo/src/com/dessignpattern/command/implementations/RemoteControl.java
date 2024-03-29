@@ -59,6 +59,7 @@ public class RemoteControl {
     for (int i = 0; i < 7; i++) {
       result.append(String.format("slot %d %s----%s%n", i, onCommands[i], offCommands[i]));
     }
+    result.append(String.format("undo command %s%n", undoCommand));
     return result.toString();
   }
 }

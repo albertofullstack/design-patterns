@@ -47,6 +47,9 @@ public class RemoteControlTest {
     simpleRemoteControl.pressOnButton(3);
     simpleRemoteControl.pressOffButton(3);
     simpleRemoteControl.undoButton();
+    System.out.println(simpleRemoteControl);
+
+    // this executes no command
     simpleRemoteControl.pressOnButton(6);
     simpleRemoteControl.undoButton();
   }
