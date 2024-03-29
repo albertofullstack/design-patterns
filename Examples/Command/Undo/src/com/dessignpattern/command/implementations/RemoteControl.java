@@ -44,6 +44,14 @@ public class RemoteControl {
     this.offCommands[index].execute();
   }
 
+  public void undoOnButton(int index) {
+    this.onCommands[index].undo();
+  }
+
+  public void undoOffButton(int index) {
+    this.offCommands[index].undo();
+  }
+
   @Override
   public String toString() {
 
