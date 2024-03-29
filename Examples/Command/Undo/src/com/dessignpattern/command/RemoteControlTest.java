@@ -40,9 +40,14 @@ public class RemoteControlTest {
     System.out.println(simpleRemoteControl);
     simpleRemoteControl.pressOnButton(4);
     simpleRemoteControl.pressOnButton(2);
+
+    // the ceiling fan is off when undo
+    simpleRemoteControl.undoButton();
     simpleRemoteControl.pressOffButton(0);
     simpleRemoteControl.pressOnButton(3);
     simpleRemoteControl.pressOffButton(3);
+    simpleRemoteControl.undoButton();
     simpleRemoteControl.pressOnButton(6);
+    simpleRemoteControl.undoButton();
   }
 }

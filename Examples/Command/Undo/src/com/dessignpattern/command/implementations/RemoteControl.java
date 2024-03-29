@@ -27,7 +27,6 @@ public class RemoteControl {
       return;
     }
     this.onCommands[index] = command;
-    undoCommand = this.onCommands[index];
   }
 
   public void setOffCommand(Command command, int index) {
@@ -37,18 +36,19 @@ public class RemoteControl {
     }
 
     this.offCommands[index] = command;
-    undoCommand = this.offCommands[index];
   }
 
   public void pressOnButton(int index) {
     this.onCommands[index].execute();
+    undoCommand = this.onCommands[index];
   }
 
   public void pressOffButton(int index) {
     this.offCommands[index].execute();
+    undoCommand = this.offCommands[index];
   }
 
-  public void undoButton(int index) {
+  public void undoButton() {
     this.undoCommand.undo();
   }
 
