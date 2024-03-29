@@ -40,6 +40,7 @@ public class CeilingFanTest {
 
     // turns on the fan and undo (should be off)
     simpleRemoteControl.pressOnButton(0);
+    System.out.println(simpleRemoteControl);
     simpleRemoteControl.undoButton();
 
     // set high speed
