@@ -15,5 +15,6 @@ public class StereoOnWithCDCommand implements Command {
   public void execute() {
     this.stereo.on();
     this.stereo.setCD();
+    this.stereo.setVolume(6);
   }
 }
