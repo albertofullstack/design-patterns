@@ -14,11 +14,9 @@ public class RemoteControl {
     this.offCommands = new Command[7];
 
     Command defaultCommand = new NoCommand();
-    for (Command command : onCommands) {
-      command = defaultCommand;
-    }
-    for (Command command : offCommands) {
-      command = defaultCommand;
+    for (int i = 0; i < 7; i++) {
+      this.onCommands[i] = defaultCommand;
+      this.offCommands[i] = defaultCommand;
     }
   }
 
@@ -44,7 +42,7 @@ public class RemoteControl {
   }
 
   public void pressOffButton(int index) {
-    this.onCommands[index].execute();
+    this.offCommands[index].execute();
   }
 
   @Override
