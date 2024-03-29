@@ -47,9 +47,11 @@ public class RemoteControl {
 
   @Override
   public String toString() {
-    return "RemoteControl{" +
-        "onCommands=" + Arrays.toString(onCommands) +
-        ", offCommands=" + Arrays.toString(offCommands) +
-        '}';
+
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < 7; i++) {
+      result.append(String.format("slot %d %s----%s%n", i, onCommands[i], offCommands[i]));
+    }
+    return result.toString();
   }
 }
