@@ -31,6 +31,9 @@ public class CeilingFanLowCommand implements Command {
       case CeilingFan.LOW:
         this.ceilingFan.low();
         break;
+      case CeilingFan.OFF:
+        this.ceilingFan.off();
+        break;
     }
   }
 }
