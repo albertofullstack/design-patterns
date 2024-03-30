@@ -1,16 +1,14 @@
 package com.dessignpattern.example.model;
 
-import com.dessignpattern.example.behaviors.FlyWithWings;
-import com.dessignpattern.example.behaviors.Quack;
+public class MallardDuck implements Duck {
 
-public class MallardDuck extends Duck {
-
-  public MallardDuck() {
-    quakBehavior = new Quack();
-    flyBehavior = new FlyWithWings();
+  @Override
+  public void quack() {
+    System.out.println("Quack!!!");
   }
 
-  public void display() {
-    System.out.println("I'm a real Mallard duck!");
+  @Override
+  public void fly() {
+    System.out.println("I'm flying");
   }
 }
