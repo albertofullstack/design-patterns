@@ -9,11 +9,11 @@ public abstract class CaffeineBeverage {
     addCondiments();
   }
 
-  private void boilWater(){
+  final void boilWater(){
     System.out.println("Boiling water");
   }
 
-  private void pourInCup(){
+  final void pourInCup(){
     System.out.println("Pouring into cup");
   }
 
