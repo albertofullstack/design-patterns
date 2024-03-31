@@ -1,6 +1,6 @@
 package com.dessignpattern.templatemethod;
 
-public class Coffee extends CaffeineBeverageWithHook {
+public class CoffeeWithHook extends CaffeineBeverageWithHook {
 
   @Override
   public void brew() {
@@ -10,5 +10,10 @@ public class Coffee extends CaffeineBeverageWithHook {
   @Override
   public void addCondiments() {
     System.out.println("Adding sugar and milk");
+  }
+
+  @Override
+  public boolean customerWantsCondiments() {
+
   }
 }

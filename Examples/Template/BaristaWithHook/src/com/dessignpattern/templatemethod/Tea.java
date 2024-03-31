@@ -1,6 +1,6 @@
 package com.dessignpattern.templatemethod;
 
-public class Tea extends CaffeineBeverageWithHook {
+public class Tea extends CaffeineBeverage {
 
   @Override
   public void brew() {
