@@ -1,7 +1,7 @@
 package com.dessignpatterns.iterator.models;
 
-import com.dessignpatterns.iterator.interfaces.Iterator;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakeHouseMenu {
 
@@ -43,7 +43,7 @@ public class PancakeHouseMenu {
 //  }
 
   public Iterator createIterator() {
-    return new PancakeMenuIterator(menuItems);
+    return menuItems.iterator();
   }
 
   public String toString() {

@@ -1,6 +1,7 @@
 package com.dessignpatterns.iterator.models;
 
-import com.dessignpatterns.iterator.interfaces.Iterator;
+
+import java.util.Iterator;
 
 public class DinerMenu {
 

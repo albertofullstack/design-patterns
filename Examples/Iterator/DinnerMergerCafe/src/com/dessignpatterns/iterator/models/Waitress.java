@@ -1,7 +1,7 @@
 package com.dessignpatterns.iterator.models;
 
-import com.dessignpatterns.iterator.interfaces.Iterator;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class Waitress {
 
@@ -19,7 +19,7 @@ public class Waitress {
 
   private void printIterator(Iterator iterator) {
 
-    while (iterator.hasNextElement()) {
+    while (iterator.hasNext()) {
       MenuItem item = (MenuItem) iterator.next();
       System.out.print(item.getName() + ", ");
       System.out.print(item.getPrice() + " -- ");
