@@ -1,7 +1,6 @@
 package com.dessignpatterns.iterator.models;
 
 import com.dessignpatterns.iterator.interfaces.Menu;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class Waitress {
