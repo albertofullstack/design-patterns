@@ -2,6 +2,7 @@ package com.dessignpatterns.composite.models;
 
 import com.dessignpatterns.composite.interfaces.MenuComponent;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Menu extends MenuComponent {
@@ -48,5 +49,10 @@ public class Menu extends MenuComponent {
     for (MenuComponent menuItem : menus) {
       menuItem.print();
     }
+  }
+
+  @Override
+  public Iterator createIterator() {
+    return new CompositeIterator(menus.iterator());
   }
 }

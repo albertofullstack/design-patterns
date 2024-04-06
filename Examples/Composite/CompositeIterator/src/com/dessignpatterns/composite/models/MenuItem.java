@@ -1,6 +1,7 @@
 package com.dessignpatterns.composite.models;
 
 import com.dessignpatterns.composite.interfaces.MenuComponent;
+import java.util.Iterator;
 
 public class MenuItem extends MenuComponent {
 
@@ -46,5 +47,10 @@ public class MenuItem extends MenuComponent {
     }
     System.out.println(", " + getPrice());
     System.out.println("  --" + getDescription());
+  }
+
+  @Override
+  public Iterator createIterator() {
+    return new NullIterator();
   }
 }
