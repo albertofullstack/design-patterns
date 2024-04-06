@@ -1,6 +1,7 @@
 package com.dessignpatterns.composite.models;
 
 import com.dessignpatterns.composite.interfaces.MenuComponent;
+import java.util.Iterator;
 
 public class Waitress {
 
@@ -25,10 +26,15 @@ public class Waitress {
 
   public void printVegetarianMenu() {
 
-  }
-
-  public boolean isItemVegetarian(String name) {
-
-    return false;
+    Iterator iterator = menus.createIterator();
+    System.out.println("\nVEGETARIAN MENU\n---");
+    while (iterator.hasNext()) {
+      MenuComponent menu = (MenuComponent) iterator.next();
+      try {
+        if (menu.isVegetarian()) {
+          menu.print();
+        }
+      } catch (UnsupportedOperationException e) {}
+    }
   }
 }
