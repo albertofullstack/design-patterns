@@ -97,4 +97,8 @@ public class GumballMachine {
   public String getLocation() {
     return location;
   }
+
+  public State getState() {
+    return state;
+  }
 }

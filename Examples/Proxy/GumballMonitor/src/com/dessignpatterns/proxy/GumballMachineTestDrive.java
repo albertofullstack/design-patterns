@@ -1,11 +1,12 @@
 package com.dessignpatterns.proxy;
 
 import com.dessignpatterns.proxy.models.GumballMachine;
+import com.dessignpatterns.proxy.models.GumballMonitor;
 
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
 
-        GumballMachine gumballMachine = new GumballMachine(5);
+        GumballMachine gumballMachine = new GumballMachine("Madrid", 112);
 
         System.out.println(gumballMachine);
 
@@ -37,5 +38,8 @@ public class GumballMachineTestDrive {
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
+
+        GumballMonitor gumballMonitor = new GumballMonitor(gumballMachine);
+        gumballMonitor.report();
     }
 }
