@@ -5,7 +5,7 @@ import com.dessignpatterns.proxy.interfaces.State;
 
 public class NoQuarterState implements State {
 
-  private GumballMachine gumballMachine;
+  private transient GumballMachine gumballMachine;
 
   public NoQuarterState(GumballMachine gumballMachine) {
     this.gumballMachine = gumballMachine;
