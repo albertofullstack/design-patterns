@@ -1,9 +1,12 @@
 package com.dessignpatterns.proxy.models;
 
 
+import com.dessignpatterns.proxy.interfaces.GumballMachineRemote;
 import com.dessignpatterns.proxy.interfaces.State;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class GumballMachine {
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
 
   State soldOutState;
   State noQuarterState;
@@ -16,7 +19,7 @@ public class GumballMachine {
   State state = new SoldOutState(this);
   int count = 0;
 
-  public GumballMachine(String location, int count) {
+  public GumballMachine(String location, int count) throws RemoteException {
     soldOutState = new SoldOutState(this);
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
