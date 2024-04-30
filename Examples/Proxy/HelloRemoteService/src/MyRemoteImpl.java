@@ -12,7 +12,10 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote {
   public static void main(String[] args) {
     try {
 
+      System.setProperty("java.rmi.server.hostname","127.0.0.1");
+
       MyRemote service = new MyRemoteImpl();
+
       System.out.println("Trying to bind");
       Naming.rebind("//localhost/RemoteHello", service);
       System.out.println("Bound");
