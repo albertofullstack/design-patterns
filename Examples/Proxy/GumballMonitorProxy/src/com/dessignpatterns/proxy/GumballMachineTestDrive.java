@@ -15,10 +15,17 @@ public class GumballMachineTestDrive {
     }
 
     try {
+      System.setProperty("java.rmi.server.hostname", "127.0.0.1");
+
       count = Integer.parseInt(args[1]);
 
       gumballMachine = new GumballMachine(args[0], count);
-      Naming.rebind("//localhost/" + args[0], gumballMachine);
+
+      System.out.println("Trying to bind");
+      Naming.rebind(String.format("%s%s%s", "//localhost/", args[0], "/gumballmachine"),
+          gumballMachine);
+      System.out.println("Bound");
+
     } catch (Exception e) {
       e.printStackTrace();
     }
