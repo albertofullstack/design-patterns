@@ -3,7 +3,9 @@ package com.dessignpatterns.proxy;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -20,7 +22,7 @@ public class ImageProxyTestDrive {
   Hashtable<String, String> albums = new Hashtable<>();
 
   public static void main(String[] args) throws Exception {
-    ImageProxyTestDrive testDrive = new ImageProxyTestDrive();
+    new ImageProxyTestDrive();
   }
 
   public ImageProxyTestDrive() throws Exception {
