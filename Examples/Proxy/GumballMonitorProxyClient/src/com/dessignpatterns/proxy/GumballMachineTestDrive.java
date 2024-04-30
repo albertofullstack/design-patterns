@@ -9,9 +9,9 @@ public class GumballMachineTestDrive {
   public static void main(String[] args) {
 
     String[] location = {
-//        "rmi://127.0.0.1/santafe/gumballmachine",
-        "rmi://127.0.0.1/boulder",
-//        "rmi://127.0.0.1/seattle/gumballmachine"
+        "rmi://127.0.0.1/boulder/gumballmachine",
+        "rmi://127.0.0.1/seattle/gumballmachine",
+        "rmi://127.0.0.1/santafe/gumballmachine"
     };
 
     GumballMonitor[] monitor = new GumballMonitor[location.length];
