@@ -19,11 +19,11 @@ public class ImageProxyTestDrive {
   JMenu menu;
   Map<String, String> albums = new HashMap<>();
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws MalformedURLException {
     new ImageProxyTestDrive();
   }
 
-  public ImageProxyTestDrive() throws Exception {
+  public ImageProxyTestDrive() throws MalformedURLException {
     albums.put("Buddha Bar",
         "https://m.media-amazon.com/images/I/61qJowdT8TL._SY300_SX300_QL70_ML2_.jpg");
     albums.put("Ima", "https://m.media-amazon.com/images/I/610ISz+nFOL._AC_UL320_.jpg");
