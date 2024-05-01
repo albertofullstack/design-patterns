@@ -2,8 +2,8 @@ package com.dessignpatterns.proxy;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -17,7 +17,7 @@ public class ImageProxyTestDrive {
   JFrame frame = new JFrame("Album Cover Viewer");
   JMenuBar menuBar;
   JMenu menu;
-  Hashtable<String, String> albums = new Hashtable<>();
+  Map<String, String> albums = new HashMap<>();
 
   public static void main(String[] args) throws Exception {
     new ImageProxyTestDrive();
@@ -40,18 +40,16 @@ public class ImageProxyTestDrive {
     menuBar.add(menu);
     frame.setJMenuBar(menuBar);
 
-    for (Enumeration<String> e = albums.keys(); e.hasMoreElements(); ) {
-      String name = e.nextElement();
-      JMenuItem menuItem = new JMenuItem(name);
+    albums.forEach((key, value) -> {
+      JMenuItem menuItem = new JMenuItem(key);
       menu.add(menuItem);
       menuItem.addActionListener(event -> {
         imageComponent.setIcon(new ImageProxy(getAlbumUrl(event.getActionCommand())));
         frame.repaint();
       });
-    }
+    });
 
     // set up frame and menus
-
     Icon icon = new ImageProxy(initialURL);
     imageComponent = new ImageComponent(icon);
     frame.getContentPane().add(imageComponent);

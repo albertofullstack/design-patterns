@@ -2,7 +2,6 @@ package com.dessignpatterns.proxy;
 
 import java.awt.Component;
 import java.awt.Graphics;
-import java.net.URL;
 import javax.swing.ImageIcon;
 
 public class NotLoadedState implements ImageState {
@@ -10,12 +9,9 @@ public class NotLoadedState implements ImageState {
   ImageIcon imageIcon;
   Thread retrievalThread;
   boolean retrieving = false;
-  URL imageURL;
   ImageProxy imageProxy;
 
-  public NotLoadedState(ImageIcon imageIcon, URL imageURL, ImageProxy imageProxy) {
-    this.imageIcon = imageIcon;
-    this.imageURL = imageURL;
+  public NotLoadedState(ImageProxy imageProxy) {
     this.imageProxy = imageProxy;
   }
 
@@ -41,7 +37,7 @@ public class NotLoadedState implements ImageState {
 
       retrievalThread = new Thread(() -> {
         try {
-          setImageIcon(new ImageIcon(imageURL, "Album Cover"));
+          setImageIcon(new ImageIcon(imageProxy.getImageURL(), "Album Cover"));
           imageProxy.setState(new LoadedState(imageIcon));
           c.repaint();
         } catch (Exception e) {

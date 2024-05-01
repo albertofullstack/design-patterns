@@ -13,7 +13,7 @@ public class ImageProxy implements Icon {
   ImageState imageState;
 
   public ImageProxy(URL url) {
-    imageState = new NotLoadedState(imageIcon, url, this);
+    imageState = new NotLoadedState(this);
     imageURL = url;
   }
 
@@ -31,5 +31,13 @@ public class ImageProxy implements Icon {
 
   public void setState(ImageState state) {
     this.imageState = state;
+  }
+
+  public ImageIcon getImageIcon() {
+    return imageIcon;
+  }
+
+  public URL getImageURL() {
+    return imageURL;
   }
 }
