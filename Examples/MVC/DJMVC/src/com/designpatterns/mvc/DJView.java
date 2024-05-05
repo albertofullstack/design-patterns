@@ -128,6 +128,13 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
     stopMenuItem.setEnabled(false);
   }
 
+  public void disableButtonsForHeartRateMonitor() {
+    increaseBPMButton.setEnabled(false);
+    decreaseBPMButton.setEnabled(false);
+    setBPMButton.setEnabled(false);
+    bpmTextField.setEnabled(false);
+  }
+
   public void enableStartMenuItem() {
     startMenuItem.setEnabled(true);
   }
