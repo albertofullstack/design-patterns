@@ -3,6 +3,7 @@ package com.designpatterns.mvc;
 public class DuckSimulator {
 
   public static void main(String[] args) {
+
     DuckSimulator simulator = new DuckSimulator();
     AbstractDuckFactory duckFactory = new CountingDuckFactory();
 
@@ -10,6 +11,7 @@ public class DuckSimulator {
   }
 
   void simulate(AbstractDuckFactory duckFactory) {
+
     Quackable redheadDuck = duckFactory.createRedheadDuck();
     Quackable duckCall = duckFactory.createDuckCall();
     Quackable rubberDuck = duckFactory.createRubberDuck();
@@ -34,6 +36,10 @@ public class DuckSimulator {
     flockOfMallarDucks.add(mallardFour);
 
     flockOfDucks.add(flockOfMallarDucks);
+
+    System.out.println("\nDuck Simulator: With observer");
+    Quackologist quackologist = new Quackologist();
+    flockOfDucks.registerObserver(quackologist);
 
     System.out.println("\nDuck Simulator: Whole Flock Simulation");
     simulate(flockOfDucks);

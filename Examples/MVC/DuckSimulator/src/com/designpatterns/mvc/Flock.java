@@ -5,18 +5,31 @@ import java.util.Iterator;
 
 public class Flock implements Quackable {
 
-  ArrayList quackers = new ArrayList();
+  ArrayList ducks = new ArrayList();
 
-  public void add(Quackable quacker) {
-    quackers.add(quacker);
+  public void add(Quackable duck) {
+    ducks.add(duck);
   }
 
-  @Override
   public void quack() {
-    Iterator iterator = quackers.iterator();
+    Iterator iterator = ducks.iterator();
     while (iterator.hasNext()) {
-      Quackable quacker = (Quackable) iterator.next();
-      quacker.quack();
+      Quackable duck = (Quackable)iterator.next();
+      duck.quack();
     }
+  }
+
+  public void registerObserver(Observer observer) {
+    Iterator iterator = ducks.iterator();
+    while (iterator.hasNext()) {
+      Quackable duck = (Quackable)iterator.next();
+      duck.registerObserver(observer);
+    }
+  }
+
+  public void notifyObservers() { }
+
+  public String toString() {
+    return "Flock of Ducks";
   }
 }
