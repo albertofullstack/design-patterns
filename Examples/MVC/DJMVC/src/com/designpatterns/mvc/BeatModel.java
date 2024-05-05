@@ -36,8 +36,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
   public void setBPM(int bpm) {
     this.bpm = bpm;
     sequencer.setTempoInBPM(getBPM());
-    System.out.println("Tempo set to: " + getBPM());
     notifyBPMObservers();
+    beatEvent();
   }
 
   public int getBPM() {
@@ -54,8 +54,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
   }
 
   public void notifyBeatObservers() {
-    for(int i = 0; i < beatObservers.size(); i++) {
-      BeatObserver observer = (BeatObserver)beatObservers.get(i);
+    for (Object beatObserver : beatObservers) {
+      BeatObserver observer = (BeatObserver) beatObserver;
       observer.updateBeat();
     }
   }
@@ -65,8 +65,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
   }
 
   public void notifyBPMObservers() {
-    for(int i = 0; i < bpmObservers.size(); i++) {
-      BPMObserver observer = (BPMObserver)bpmObservers.get(i);
+    for (Object bpmObserver : bpmObservers) {
+      BPMObserver observer = (BPMObserver) bpmObserver;
       observer.updateBPM();
     }
   }
@@ -88,10 +88,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
   }
 
-
-  public void meta(MetaMessage message) {
-    sequencer.setMicrosecondPosition(0);
-  }
+  public void meta(MetaMessage message) {}
 
   public void setUpMidi() {
     try {

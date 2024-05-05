@@ -15,6 +15,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 
 public class DJView implements ActionListener,  BeatObserver, BPMObserver {
   BeatModelInterface model;
@@ -46,7 +47,7 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
     // Create all Swing components here
     viewPanel = new JPanel(new GridLayout(1, 2));
     viewFrame = new JFrame("View");
-    viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    viewFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     viewFrame.setSize(new Dimension(100, 80));
     bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
     beatBar = new BeatBar();
@@ -65,7 +66,7 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
     // Create all Swing components here
     JFrame.setDefaultLookAndFeelDecorated(true);
     controlFrame = new JFrame("Control");
-    controlFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    controlFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     controlFrame.setSize(new Dimension(100, 80));
 
     controlPanel = new JPanel(new GridLayout(1, 2));
@@ -74,24 +75,12 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
     menu = new JMenu("DJ Control");
     startMenuItem = new JMenuItem("Start");
     menu.add(startMenuItem);
-    startMenuItem.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent event) {
-        controller.start();
-      }
-    });
+    startMenuItem.addActionListener(event -> controller.start());
     stopMenuItem = new JMenuItem("Stop");
     menu.add(stopMenuItem);
-    stopMenuItem.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent event) {
-        controller.stop();
-      }
-    });
+    stopMenuItem.addActionListener(event -> controller.stop());
     JMenuItem exit = new JMenuItem("Quit");
-    exit.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent event) {
-        System.exit(0);
-      }
-    });
+    exit.addActionListener(event -> System.exit(0));
 
     menu.add(exit);
     menuBar.add(menu);
